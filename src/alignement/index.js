@@ -19,12 +19,8 @@ function addWordToLine(currentSentence, wordText) {
     return [...currentSentence, wordText].join(' ')
 }
 
-function align(accurateBaseText, automatedTranscription, customTextAttributeName) {
-    // defaults 
-    let textAttributeName = 'text';
-    if (customTextAttributeName !== undefined) {
-        textAttributeName = customTextAttributeName;
-    }
+function align(accurateBaseText, automatedTranscription, textAttributeName = 'text', segmentationBasedOnSBD = true) {
+
     // console.log(automatedTranscription)
     // Lines text to align, array of lines strings. - programmatic you need honorifics to break on full stop.
     // TODO: could segment text using this module
@@ -33,7 +29,8 @@ function align(accurateBaseText, automatedTranscription, customTextAttributeName
 
     // remove this char ’
     // Array of human transcription text segmented into lines 
-    const accurateBaseTextLines = textSegmentation(accurateBaseText);
+
+    const accurateBaseTextLines = segmentationBasedOnSBD ? textSegmentation(accurateBaseText) : accurateBaseText.split('\n');;
     // word error distance for WER, start with high number
     let currentDist = 10000
         // first line taken into consideration 

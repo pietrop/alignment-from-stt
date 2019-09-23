@@ -50,13 +50,38 @@ const automatedTranscription = require('../sample-data/kaldi-alignments.json').w
 // array of words, each .end, .start., .transcript_text;
 const humanCorrectedTranscription = fs.readFileSync('./sample-data/human-transcription-on-one-line.txt').toString();
 
-var reAlignedTranscription = align(humanCorrectedTranscription,automatedTranscription);
+const reAlignedTranscription = align(humanCorrectedTranscription, automatedTranscription);
 
 console.log(reAlignedTranscription)
 ```
 
 See examples in `src/example-usage.js`.
- 
+
+Optional attributes
+
+```js
+var reAlignedTranscription = align(
+  humanCorrectedTranscription,
+  automatedTranscription,
+  'word', // or punct, - optional textAttributeName
+  true, // defaults to true - optional segmentationBasedOnSBD
+  });
+```
+
+`textAttributeName` attribute for text field in word attribtue 
+```js
+{start: 0.2, end: 3, word: 'hello'} 
+```
+or 
+```js
+{start: 0.3, end: 6, punct: 'world'} 
+```
+
+by default  is set to `text`.
+
+`segmentationBasedOnSBD` by default uses [`sbd`](https://www.npmjs.com/package/sbd) for sentence boundary detection. if set to false, then it spltis on `\n`. Helpful if you need more fine graine control on the lines you want to align. 
+
+
 
 ## System Architecture
 <!-- _High level overview of system architecture_ -->
