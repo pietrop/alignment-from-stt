@@ -1,20 +1,20 @@
 {
-  "name": "alignment",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "difflib": "^0.2.4",
-    "everpolate": "0.0.3",
-    "fast-levenshtein": "^2.0.6",
-    "number-to-words": "^1.2.4",
-    "sbd": "^1.0.14"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test:watch": "jest --watchAll",
-    "test": "jest"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "alignment-from-stt",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "difflib": "^0.2.4",
+        "everpolate": "0.0.3",
+        "fast-levenshtein": "^2.0.6",
+        "number-to-words": "^1.2.4",
+        "sbd": "^1.0.14"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test:watch": "jest --watchAll",
+        "test": "jest"
+    },
+    "author": "",
+    "license": "ISC"
 }

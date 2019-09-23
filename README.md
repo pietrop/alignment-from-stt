@@ -1,4 +1,4 @@
-# Alignement 
+# `alignment-from-stt`
 <!-- _One liner + link to confluence page_
 
 _Screenshot of UI - optional_ -->
