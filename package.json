@@ -1,19 +1,21 @@
 {
     "name": "alignment-from-stt",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "line level alignement",
     "main": "src/index.js",
     "dependencies": {
-        "difflib": "^0.2.4",
-        "everpolate": "0.0.3",
         "fast-levenshtein": "^2.0.6",
-        "number-to-words": "^1.2.4",
         "sbd": "^1.0.14"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "jest": "^24.9.0"
+    },
     "scripts": {
         "test:watch": "jest --watchAll",
-        "test": "jest"
+        "test": "jest",
+        "publish:public": "npm publish --access public",
+        "publish:dry:run": "npm publish --dry-run"
     },
     "author": "",
-    "license": "ISC"
+    "license": "MIT"
+}
