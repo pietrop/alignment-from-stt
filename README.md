@@ -3,19 +3,16 @@
 
 _Screenshot of UI - optional_ -->
 
-Fork of `BBC/alignment-from-stt`
+Fork of [`BBC/alignment-from-stt`](https://github.com/bbc/alignment-from-stt)
 
-Work in progress, originally developed by Mathieu Triay, in BBC R&D as part of the New News prototype "fast forward". Being refactored into a reusable module by News Labs.
+> Work in progress, originally developed by Mathieu Triay, in BBC R&D as part of the New News prototype "fast forward". Being refactored into a reusable module by News Labs.
 
 <!--
 BBC Transcription Model  
 
 - check/test Adapter Kaldi to Transcription model with alignement.json output. 
 - autoEditJson Adapter to Transcription model?
-
-
 - Transcription model to "adapter" autoEditJson. to do 2 ways
-
 -->
 
 
