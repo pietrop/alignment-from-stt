@@ -1,8 +1,8 @@
 {
     "name": "alignment-from-stt",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "line level alignement",
+    "main": "src/index.js",
     "dependencies": {
         "difflib": "^0.2.4",
         "everpolate": "0.0.3",
@@ -17,4 +17,3 @@
     },
     "author": "",
     "license": "ISC"
-}
